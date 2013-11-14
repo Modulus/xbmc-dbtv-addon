@@ -23,5 +23,8 @@ class MainTest(TestCase):
             self.assertTrue(episodes)
             all_episodes.append(episodes)
         self.assertTrue(all_episodes)
+        
+        for episode in episodes:
+            self.assertEquals(1, Utils.checkUrl(episode.url))
 
 
